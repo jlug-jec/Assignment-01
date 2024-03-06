@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
 const blockID = process.env.Block_ID;
-
+console.log(NOTION_API_KEY,blockID)
 const router = express.Router();
 const notion = new Client({ auth: NOTION_API_KEY });
 async function insertPageContent(item, price, date) {
