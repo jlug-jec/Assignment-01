@@ -64,7 +64,7 @@ async function insertPageContent(item, price, date) {
 }
 
 async function getBlockContent() {
-  const blockId = "0486e9ce80004a258763ec665b96b301";
+  const blockId = process.env.Block_ID;
   const response = await notion.blocks.children.list({
     block_id: blockId,
     page_size: 100,
